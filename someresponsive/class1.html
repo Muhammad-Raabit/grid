@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 1.2rem;
+      }
+      .container {
+        border: 5px solid limegreen;
+        width: min(100% - 2rem, 600px);
+        margin-inline: auto;
+        animation: modal;
+      }
+      header {
+        background: #e54b4b;
+        color: #ebebd3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        border-bottom: 5px solid limegreen;
+      }
+      #close-btn {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>My Home Page</h2>
+        <h4 id="close-btn">X</h4>
+      </header>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ex natus
+      aliquam molestiae blanditiis velit consequatur hic. Aperiam blanditiis,
+      fugit omnis, facilis quia explicabo repellendus, est neque iusto eligendi
+      impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Voluptas, doloremque cum? Error dignissimos corporis explicabo facilis,
+      maxime dolor illum quibusdam nam rem laborum quo a iure! Sunt commodi
+      adipisci beatae?
+    </div>
+
+    <script>
+      let closeBtn = document.querySelector("#close-btn");
+      let containerDiv = document.querySelector(".container");
+
+      closeBtn.addEventListener("click", (e) => {
+        containerDiv.style =
+          "transform:translateX(-200%);transition:transform 1s linear;";
+      });
+    </script>
+  </body>
+</html>
